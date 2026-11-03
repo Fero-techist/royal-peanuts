@@ -1,29 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --color-primary: #C2542D;
-  --color-primary-hover: #A9421C;
-  --color-primary-light: #FCEFEA;
-  --color-dark-brown: #2A170F;
-  --color-cream-bg: #FAF5F0;
-  --color-cream-border: #EFE6DE;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --color-primary: #c2542d;
+  --color-primary-hover: #a9421c;
+  --color-primary-light: #fcefea;
+  --color-dark-brown: #2a170f;
+  --color-cream-bg: #faf5f0;
+  --color-cream-border: #efe6de;
 }
 
 /* Custom smooth styling */
 ::selection {
-  background-color: #C2542D;
+  background-color: #c2542d;
   color: #ffffff;
 }
 
 body {
-  background-color: #FAF5F0;
-  color: #3B2A22;
+  background-color: #faf5f0;
+  color: #3b2a22;
   font-family: var(--font-sans);
   overflow-x: hidden;
 }
 
-h1, h2, h3, .font-display {
+h1,
+h2,
+h3,
+.font-display {
   font-family: var(--font-serif);
 }
