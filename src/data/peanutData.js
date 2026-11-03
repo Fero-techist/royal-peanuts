@@ -226,9 +226,9 @@ export const TARGET_AUDIENCES = [
 ];
 
 export const CONTACT_INFO = {
-  phone: "+234 812 345 6789",
-  phoneDisplay: "+234 812 345 6789",
-  whatsappNumber: "2348123456789",
+  phone: "+234 916 028 9926",
+  phoneDisplay: "+234 916 028 9926",
+  whatsappNumber: "2349160289926",
   location: "Lagos, Nigeria (Nationwide Courier Delivery)",
   hours: "Mon – Sat: 8:00 AM – 6:00 PM",
   email: "orders@royalpeanuts.com",
