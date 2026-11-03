@@ -1,30 +1,43 @@
 import React, { useState } from 'react';
-import { Crown, MessageCircle, Menu, X, PhoneCall } from 'lucide-react';
+import { Crown, MessageCircle, Menu, X } from 'lucide-react';
 import { CONTACT_INFO } from '../data/peanutData';
 
 export default function Navbar({ onOpenOrderModal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const whatsappUrl = `https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent(
-    'Hello Royal Peanuts! I would like to place an order or make an enquiry.'
+    "Hello King's Peanut! I would like to place an order or make an enquiry."
   )}`;
 
   return (
-    <header className="sticky top-0 z-40 bg-[#FAF5F0]/90 backdrop-blur-md border-b border-[#EFE6DE]">
+    <header className="sticky top-0 z-40 bg-[#FAF5F0]/95 backdrop-blur-md border-b border-[#EFE6DE]">
+      {/* Brand Top Royal Accent Bar: Burnt Orange & Gold */}
+      <div className="h-1 w-full bg-gradient-to-r from-[#C2542D] via-[#D4AF37] to-[#C2542D]" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo & Emblem */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-full bg-[#C2542D] text-white flex items-center justify-center shadow-md shadow-[#C2542D]/20 transition-transform group-hover:scale-105">
-              <Crown className="w-6 h-6 text-[#FEE6D6]" />
+          <a href="#" className="flex items-center gap-3.5 group">
+            {/* Burnt Orange Badge with Gold Ring & Radiant Gold Crown */}
+            <div className="relative w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-[#C2542D] via-[#D4AF37] to-[#C2542D] shadow-md shadow-[#C2542D]/20 transition-transform group-hover:scale-105">
+              <div className="w-full h-full rounded-full bg-gradient-to-br from-[#C2542D] to-[#9E3915] flex items-center justify-center">
+                <Crown className="w-5 h-5 text-[#FDE68A] drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]" />
+              </div>
             </div>
+
             <div className="flex flex-col">
-              <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#2A170F] leading-tight">
-                ROYAL PEANUTS
+              <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#2A170F] leading-tight group-hover:text-[#C2542D] transition-colors">
+                KING’S PEANUT
               </span>
-              <span className="text-[10px] uppercase tracking-widest text-[#C2542D] font-semibold">
-                Artisanal Roasted
-              </span>
+              <div className="flex items-center gap-1.5">
+                <span className="text-[10px] uppercase tracking-widest text-[#B38016] font-bold">
+                  Artisanal Roasted
+                </span>
+                <span className="w-1 h-1 rounded-full bg-[#D4AF37]"></span>
+                <span className="text-[10px] uppercase tracking-wider text-[#C2542D] font-medium hidden sm:inline">
+                  King’s Treats
+                </span>
+              </div>
             </div>
           </a>
 
@@ -51,7 +64,7 @@ export default function Navbar({ onOpenOrderModal }) {
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={() => onOpenOrderModal()}
-              className="text-xs font-semibold px-4 py-2.5 rounded-full border border-[#C2542D] text-[#C2542D] hover:bg-[#FCEFEA] transition-colors"
+              className="text-xs font-semibold px-4 py-2.5 rounded-full border border-[#D4AF37] text-[#8F590A] bg-[#FFF9EE] hover:bg-[#FDF3D8] hover:border-[#C89218] transition-all shadow-xs"
             >
               Quick Order
             </button>
@@ -59,9 +72,9 @@ export default function Navbar({ onOpenOrderModal }) {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#C2542D] hover:bg-[#A9421C] text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-full shadow-md shadow-[#C2542D]/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center gap-2 bg-[#C2542D] hover:bg-[#A9421C] text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-full shadow-md shadow-[#C2542D]/25 ring-1 ring-[#D4AF37]/40 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
-              <MessageCircle className="w-4 h-4 fill-current" />
+              <MessageCircle className="w-4 h-4 fill-current text-[#FDE68A]" />
               <span>Order on WhatsApp</span>
             </a>
           </div>
@@ -72,10 +85,10 @@ export default function Navbar({ onOpenOrderModal }) {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-[#C2542D] text-white shadow-sm"
+              className="p-2.5 rounded-full bg-[#C2542D] text-white shadow-sm ring-1 ring-[#D4AF37]/40"
               title="Chat on WhatsApp"
             >
-              <MessageCircle className="w-5 h-5 fill-current" />
+              <MessageCircle className="w-4 h-4 fill-current text-[#FDE68A]" />
             </a>
             <button
               type="button"
@@ -134,7 +147,7 @@ export default function Navbar({ onOpenOrderModal }) {
                 setMobileMenuOpen(false);
                 onOpenOrderModal();
               }}
-              className="w-full text-center py-2.5 rounded-full border border-[#C2542D] text-[#C2542D] font-semibold text-sm hover:bg-[#FCEFEA]"
+              className="w-full text-center py-2.5 rounded-full border border-[#D4AF37] text-[#8F590A] bg-[#FFF9EE] font-semibold text-sm hover:bg-[#FDF3D8]"
             >
               Quick Order Calculator
             </button>
@@ -142,9 +155,9 @@ export default function Navbar({ onOpenOrderModal }) {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 bg-[#C2542D] text-white py-3 rounded-full font-semibold text-sm shadow-md"
+              className="w-full inline-flex items-center justify-center gap-2 bg-[#C2542D] text-white py-3 rounded-full font-semibold text-sm shadow-md ring-1 ring-[#D4AF37]/40"
             >
-              <MessageCircle className="w-4 h-4 fill-current" />
+              <MessageCircle className="w-4 h-4 fill-current text-[#FDE68A]" />
               Chat on WhatsApp
             </a>
           </div>

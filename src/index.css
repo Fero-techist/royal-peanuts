@@ -3,10 +3,29 @@
 @theme {
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  
+  /* Brand Primary: Burnt Orange */
+  --color-burnt-orange: #c2542d;
+  --color-burnt-orange-hover: #a9421c;
+  --color-burnt-orange-dark: #8c3a1a;
+  --color-burnt-orange-light: #fcefea;
+  --color-burnt-orange-border: #f6d7cb;
   --color-primary: #c2542d;
   --color-primary-hover: #a9421c;
   --color-primary-light: #fcefea;
+
+  /* Brand Secondary / Royal Accent: Gold */
+  --color-gold: #d4af37;
+  --color-gold-hover: #b8860b;
+  --color-gold-dark: #8f590a;
+  --color-gold-light: #fff8e7;
+  --color-gold-border: #f1d688;
+  --color-gold-accent: #e5a93c;
+  --color-gold-glow: rgba(212, 175, 55, 0.25);
+
+  /* Neutrals & Dark Luxury */
   --color-dark-brown: #2a170f;
+  --color-dark-surface: #24130b;
   --color-cream-bg: #faf5f0;
   --color-cream-border: #efe6de;
 }
@@ -29,4 +48,27 @@ h2,
 h3,
 .font-display {
   font-family: var(--font-serif);
+}
+
+/* Gold Gradient utilities */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f59e0b 0%, #d4af37 50%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-burnt-gradient {
+  background: linear-gradient(135deg, #c2542d 0%, #d4af37 100%);
+}
+
+.gold-badge {
+  background-color: #fff9ee;
+  color: #8f590a;
+  border: 1px solid #f1d688;
+}
+
+.burnt-orange-badge {
+  background-color: #fcefea;
+  color: #8c3a1a;
+  border: 1px solid #f6d7cb;
 }

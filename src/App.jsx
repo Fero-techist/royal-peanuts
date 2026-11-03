@@ -25,7 +25,7 @@ export default function App() {
   };
 
   const floatingWhatsAppUrl = `https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent(
-    "Hello Royal Peanuts! I would like to place an order or make an enquiry.",
+    "Hello King's Peanut! I would like to place an order or make an enquiry.",
   )}`;
 
   return (
@@ -48,7 +48,7 @@ export default function App() {
 
         {/* 5. Target Audience Segments */}
         <TargetAudience
-          onSelectAudience={(item) => handleOpenModal(PRODUCTS[0])}
+          onSelectAudience={() => handleOpenModal(PRODUCTS[0])}
         />
 
         {/* 6. Brand Story & Craft Process */}
@@ -60,6 +60,7 @@ export default function App() {
 
       {/* Interactive Order & Size Selector Modal */}
       <OrderModal
+        key={modalProduct?.id || 'order-modal'}
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         initialProduct={modalProduct}
