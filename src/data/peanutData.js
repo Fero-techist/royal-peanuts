@@ -94,7 +94,7 @@ export const PRODUCTS = [
     category: "spicy",
     tag: "SPICY DELIGHT",
     tagVariant: "secondary",
-    image: prodPeppered,
+    image: prodCoconut,
     desc: "Toasted peanuts tossed in a fiery, savory native pepper blend for bold flavor lovers.",
     availableSizes: [
       "100g Pouch",
@@ -115,7 +115,7 @@ export const PRODUCTS = [
     category: "flavored",
     tag: "TROPICAL CRISP",
     tagVariant: "secondary",
-    image: prodCoconut,
+    image: prodPeppered,
     desc: "Crunchy golden roasted peanuts infused with rich, toasted coconut shreds.",
     availableSizes: [
       "100g Pouch",
