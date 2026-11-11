@@ -98,8 +98,8 @@ Please confirm availability and delivery to my address. Thank you!`;
                     setSelectedSizeIndex(0);
                   }}
                   className={`p-2.5 rounded-xl border text-left text-xs font-semibold flex items-center justify-between transition-all ${selectedProduct.id === prod.id
-                      ? 'border-[#C2542D] bg-[#FFF9EE] text-[#8C3A1A] ring-1 ring-[#D4AF37]/50 shadow-xs'
-                      : 'border-[#E5DCD4] bg-white text-[#5F4E44] hover:bg-[#F7EFE9]'
+                    ? 'border-[#C2542D] bg-[#FFF9EE] text-[#8C3A1A] ring-1 ring-[#D4AF37]/50 shadow-xs'
+                    : 'border-[#E5DCD4] bg-white text-[#5F4E44] hover:bg-[#F7EFE9]'
                     }`}
                 >
                   <span className="truncate">{prod.name}</span>
@@ -111,7 +111,7 @@ Please confirm availability and delivery to my address. Thank you!`;
             </div>
           </div>
 
-          {/* Step 2: Select Size */}
+
           <div>
             <label className="block text-xs font-bold uppercase tracking-wider text-[#6F5B51] mb-2.5">
               2. Select Size & Packaging
@@ -123,8 +123,8 @@ Please confirm availability and delivery to my address. Thank you!`;
                   type="button"
                   onClick={() => setSelectedSizeIndex(idx)}
                   className={`w-full p-3 rounded-2xl border flex items-center justify-between text-left transition-all ${selectedSizeIndex === idx
-                      ? 'border-[#C2542D] bg-[#FFF9EE] ring-1 ring-[#D4AF37]/50 shadow-xs'
-                      : 'border-[#E5DCD4] bg-white hover:bg-[#F9F3ED]'
+                    ? 'border-[#C2542D] bg-[#FFF9EE] ring-1 ring-[#D4AF37]/50 shadow-xs'
+                    : 'border-[#E5DCD4] bg-white hover:bg-[#F9F3ED]'
                     }`}
                 >
                   <div className="flex flex-col">
@@ -150,7 +150,7 @@ Please confirm availability and delivery to my address. Thank you!`;
             </div>
           </div>
 
-          {/* Step 3: Quantity */}
+
           <div>
             <label className="block text-xs font-bold uppercase tracking-wider text-[#6F5B51] mb-2.5">
               3. Quantity

@@ -77,16 +77,16 @@ export default function PriceList({ onOpenOrderModal }) {
               key={flavor.id}
               onClick={() => setActiveTab(flavor.id)}
               className={`px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 flex items-center gap-2 ${activeTab === flavor.id
-                  ? 'bg-[#C2542D] text-white shadow-md shadow-[#C2542D]/25 ring-2 ring-[#D4AF37]/60 scale-102'
-                  : 'bg-white hover:bg-[#FFF9EE] text-[#5F4E44] hover:text-[#8F590A] border border-[#EFE6DE] hover:border-[#F1D688]'
+                ? 'bg-[#C2542D] text-white shadow-md shadow-[#C2542D]/25 ring-2 ring-[#D4AF37]/60 scale-102'
+                : 'bg-white hover:bg-[#FFF9EE] text-[#5F4E44] hover:text-[#8F590A] border border-[#EFE6DE] hover:border-[#F1D688]'
                 }`}
             >
               <span>{flavor.emoji}</span>
               <span>{flavor.shortName}</span>
               <span
                 className={`text-[10px] px-2 py-0.5 rounded-full ${activeTab === flavor.id
-                    ? 'bg-black/20 text-[#FDE68A]'
-                    : 'bg-[#FAF5F0] text-[#8F590A]'
+                  ? 'bg-black/20 text-[#FDE68A]'
+                  : 'bg-[#FAF5F0] text-[#8F590A]'
                   }`}
               >
                 {flavor.startingPrice}
@@ -127,10 +127,10 @@ export default function PriceList({ onOpenOrderModal }) {
                 <div
                   key={index}
                   className={`px-5 sm:px-8 py-4 sm:py-4.5 flex items-center justify-between transition-colors ${isRecommended
-                      ? 'bg-[#FFF9EE]/70 hover:bg-[#FFF3D6]'
-                      : index % 2 === 0
-                        ? 'bg-white hover:bg-[#FAF6F2]'
-                        : 'bg-[#FCF9F6] hover:bg-[#FAF6F2]'
+                    ? 'bg-[#FFF9EE]/70 hover:bg-[#FFF3D6]'
+                    : index % 2 === 0
+                      ? 'bg-white hover:bg-[#FAF6F2]'
+                      : 'bg-[#FCF9F6] hover:bg-[#FAF6F2]'
                     }`}
                 >
                   {/* Left: Size & Recommended Badge */}
@@ -142,8 +142,8 @@ export default function PriceList({ onOpenOrderModal }) {
                       {item.badge && (
                         <span
                           className={`text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider ${isRecommended
-                              ? 'bg-gradient-to-r from-[#D4AF37] to-[#B38016] text-white shadow-xs border border-[#FDE68A]/30'
-                              : 'bg-[#FCEFEA] text-[#8C3A1A] border border-[#F6D7CB]'
+                            ? 'bg-gradient-to-r from-[#D4AF37] to-[#B38016] text-white shadow-xs border border-[#FDE68A]/30'
+                            : 'bg-[#FCEFEA] text-[#8C3A1A] border border-[#F6D7CB]'
                             }`}
                         >
                           {item.badge}
