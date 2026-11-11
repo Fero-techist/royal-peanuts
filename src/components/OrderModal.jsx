@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, MessageCircle, Plus, Minus, Check, Crown, Sparkles } from 'lucide-react';
-import { PRODUCTS, REGULAR_PRICE_LIST, FLAVORED_PRICE_LIST, CONTACT_INFO } from '../data/peanutData';
+import { PRODUCTS, REGULAR_PRICE_LIST, FLAVORED_PRICE_LIST, ROYAL_ROLL_PRICE_LIST, CONTACT_INFO } from '../data/peanutData';
 
 export default function OrderModal({ isOpen, onClose, initialProduct }) {
   const [selectedProduct, setSelectedProduct] = useState(initialProduct || PRODUCTS[0]);
@@ -18,6 +18,13 @@ export default function OrderModal({ isOpen, onClose, initialProduct }) {
       priceNum: item.priceNum,
       priceStr: item.price,
     }))
+    : selectedProduct.id === 'royal-roll'
+      ? ROYAL_ROLL_PRICE_LIST.map((item) => ({
+        label: item.size,
+        desc: item.packaging,
+        priceNum: item.priceNum,
+        priceStr: item.price,
+      }))
     : selectedProduct.id === 'confectionery'
       ? (selectedProduct.availableSizes || ['Custom Package']).map((sizeName, idx) => {
         const customPrices = [1200, 2000, 2500, 3500, 6000, 10000, 25000];

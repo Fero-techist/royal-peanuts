@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Sparkles, MessageCircle, Info, CheckCircle2, Crown } from 'lucide-react';
-import { REGULAR_PRICE_LIST, FLAVORED_PRICE_LIST, CONTACT_INFO } from '../data/peanutData';
+import { REGULAR_PRICE_LIST, FLAVORED_PRICE_LIST, ROYAL_ROLL_PRICE_LIST, CONTACT_INFO } from '../data/peanutData';
 
 const FLAVOR_OPTIONS = [
   {
@@ -9,7 +9,7 @@ const FLAVOR_OPTIONS = [
     shortName: 'Regular Coated',
     emoji: '🧡',
     priceList: REGULAR_PRICE_LIST,
-    startingPrice: 'From ₦500',
+    startingPrice: 'From ₦1,000',
     note: 'Our signature crisp coated recipe roasted fresh daily.',
   },
   {
@@ -19,16 +19,7 @@ const FLAVOR_OPTIONS = [
     emoji: '🍫',
     priceList: FLAVORED_PRICE_LIST,
     startingPrice: 'From ₦700',
-    note: 'Indulgent cocoa glaze. Same price list applies to Peppered & Coconut.',
-  },
-  {
-    id: 'peppered',
-    name: 'Peppered Peanut',
-    shortName: 'Peppered Peanut',
-    emoji: '🌶️',
-    priceList: FLAVORED_PRICE_LIST,
-    startingPrice: 'From ₦700',
-    note: 'Fiery native spice blend. Same price list applies to Chocolate & Coconut.',
+    note: 'Indulgent cocoa glaze. Same price list applies to Coconut Peanut.',
   },
   {
     id: 'coconut',
@@ -37,7 +28,16 @@ const FLAVOR_OPTIONS = [
     emoji: '🥥',
     priceList: FLAVORED_PRICE_LIST,
     startingPrice: 'From ₦700',
-    note: 'Infused toasted coconut crisp. Same price list applies to Chocolate & Peppered.',
+    note: 'Infused toasted coconut crisp. Same price list applies to Chocolate-Coated.',
+  },
+  {
+    id: 'royal-roll',
+    name: 'Royal Roll',
+    shortName: 'Royal Roll',
+    emoji: '👑',
+    priceList: ROYAL_ROLL_PRICE_LIST,
+    startingPrice: 'From ₦100',
+    note: 'Crispy royal roll snack treats roasted fresh to golden perfection.',
   },
 ];
 
